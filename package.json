@@ -1,0 +1,27 @@
+{
+  "name": "homework9",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+  "bin": {
+    "todo-cli": "script.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolozKapanadzee/homework9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolozKapanadzee/homework9/issues"
+  },
+  "homepage": "https://github.com/NikolozKapanadzee/homework9#readme",
+  "description": "",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
