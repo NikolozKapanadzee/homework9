@@ -4,7 +4,8 @@
   "main": "script.js",
   "type": "module",
   "bin": {
-    "todo-cli": "script.js"
+    "todo-cli": "script.js",
+    "weather-cli": "weather.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
