@@ -42,15 +42,31 @@ program
         await writeFile ("todo-list.json", JSON.stringify(todos))
         console.log(`todo ${newTodo} added in list`);
     })
-
-
-
-
-
-
-
-
-
-
-
+program
+    .command("delete")
+    .argument("<id>")
+    .action(async (id) => {
+        const todos = await readFile("todo-list.json", true)
+        const index = todos.findIndex(el => el.id === Number(id))
+        if (index === -1) {
+            console.log("can not delete todo");
+        }
+        const deletedTodo = todos.splice(index, 1)
+        await writeFile ("todo-list.json", JSON.stringify(todos))
+        console.log(`deleted todo ${deletedTodo}`);
+    })
+program
+    .command("update")
+    .argument("<id>")
+    .argument("<name>")
+    .action(async (id, name) => {
+        const todos = await readFile("todo-list.json", true)
+        const index = todos.findIndex(el => el.id === Number(id))
+        if (index === -1) {
+            console.log("can not update todo");
+        }
+        const updatedTodo = todos[index].name = name
+        await writeFile ("todo-list.json", JSON.stringify(todos))
+        console.log(`updated ${todos[index]} to ${updatedTodo}`);
+    })
 program.parse()
